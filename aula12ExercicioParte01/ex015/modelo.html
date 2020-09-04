@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificador de Idades</title>
+
+  <link rel="stylesheet" href="estilo.css"> <!--CRIANDO O ESTILO EM OUTRO ARQUIVO SEPARADO-->
+</head>
+<body onload="carregar()"> <!--isso quer dizer que quando o sistema carregar, ele vai chamar a função "Carregar"-->
+  <header>
+      <!--CABEÇALHO-->
+      <h1>Verificador de Idades</h1>
+      <!--"<h1> de título"-->
+
+  </header>
+  <section>
+      <!--SEÇÂO-->
+      <div>
+        <p>Ano de Nascimento:</p>
+        <input type="number" name="txtano" id="txtano" min="0">
+      </p>
+      <p>Sexo:
+        <input type="radio" name="radsex" id="masc" checked> <!--para apresentar a opção de clicar na bolinha e
+        CHECKED vai fazer com que a oção masculina esteja marcada por padrao-->
+        <label for="masc">Masculino</label>
+        <input type="radio" name="radsex" id="fem">
+        <label for="fem">Feminino</label>
+      </p>
+      <p>
+        <input type="button" value="Verificar" onclick="verificar()">
+      </p>
+      </div>
+      <div id="res">
+        Preencha os dados acima para ver o resultado!
+      </div>
+
+  </section>
+  <footer>
+      <!--RODAPÉ-->
+      <p>&copy; Faces da Vida</p>
+    <!--"<p>" de parágrafo-->
+  </footer>
+  <script src="script.js"></script> <!--CRIANDO SCRIPT EM OUTRO ARQUIVO SEPARADO-->
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div#area{
+      font: normal 50pt Arial;
+      background:purple;
+      color:white;
+      width: 300px;   //largura
+      height: 500px;    //altura
+      line-height: 500px;
+      text-align: center;  //centralizar;
+
+
+    }
+  </style>
+</head>
+<body>
+
+  <!--QUANDO EU CLICAR NA MINHA DIV, EU VOU CRIAR UM OBJETO CHAMADO "A" NA
+  AREA DO JAVASCRIPT...-->
+
+  <!--
+  <div id= "area" onclick="clicar()" onmouseenter= "entrar()" onmouseout="sair()">
+  -->
+  <div id = "area">
+    Interaja...
+  </div>
+  <script>
+    var a = window.document.getElementById('area')
+
+    a.addEventListener('click', clicar)
+    a.addEventListener('mouseenter', entrar)
+    a.addEventListener('mouseout', sair)
+
+    function clicar(){
+
+      //...ENTÃO AQUI SE FAZ UMA LIGAÇÃO DO OBEJETO "A" DENTRO DO JAVASCRIPT
+      //JUNTO AO ELEMTENTO "AREA" QUE ESTÁ DENTRO DO HTML...
+      //var a = window.document.getElementById('area')
+
+      //E ESSE OBEJTO VAI MUDAR O CONTEÚDO DELE PARA "CLICOU"
+      a.innerText = 'Clicou!'
+      a.style.background = 'red'
+    }
+    function entrar(){
+      a.innerText = 'Entrou!'
+      a.style.background = 'pink'
+    }
+    function sair(){
+      a.innerText = 'Saiu!'
+      a.style.background = 'purple'
+    }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONDE MORA?</title>
+  <!--PRECISAMOS FAZER O TITULO DA PAGINA-->
+</head>
+<body>
+  <h1>BRASILEIRO OU ESTRANGEIRO...</h1>
+
+  Digite o país que reside : <input type="text" name="txtpais" id="txtpais">
+  <input type="button" value="Pesquisar" onclick="paises()">
+  <div id="resp">
+
+  </div>
+  <script>
+    function paises(){
+      var mensagem  = window.document.querySelector('input#txtpais')
+      var resp = window.document.querySelector('div#resp')
+      var msg = mensagem.value
+
+      if (msg.toUpperCase() == 'BRASIL'){
+        resp.innerHTML = `<p>Você é Brasileiro</p>`
+      }else{
+        resp.innerHTML = `<p>Você é Estrangeiro</p>`
+      }
+    }
+
+
+  </script>
+</body>
+</html>

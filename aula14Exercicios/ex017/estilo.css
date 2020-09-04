@@ -1,0 +1,35 @@
+body{
+    background: rgb(153, 232, 252);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+div{
+    padding: 15px;
+}
+
+textarea{
+    background: pink;
+    border-radius: 15px;
+
+
+}
+section{
+    background: rgb(255, 255, 255);
+    border-radius: 10px; /*bordas arredondadas*/
+    padding: 15px; /*para dar espaço ao texto junto a borda*/
+    width: 500px; /*largura fixa*/
+    margin: auto; /*centralizar */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432); /*colocar uma sombrinha*/
+
+}
+
+footer{
+    color: rgb(241, 106, 196);
+    text-align: center;
+    font-style: italic;
+}

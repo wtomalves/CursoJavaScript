@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DETRAN</title>
+</head>
+<body>
+  <h1>...Sistema de multas...</h1>
+  <!--Aqui estamos criando um imput number, e o que nos importar o id-->
+  Velocidade do carro : <input type="number" name="txtvel" id="txtvel"> Km/h
+  <!-- Aqui estamos criando um imput com botao em que ele vai pegar a acao do mouse em onclick-->
+  <input type="button" value="Verificar" onclick="calcular()">
+  <!--Não podemos esquecer de criar uma div com id recebendo o resultado-->
+  <div id="res">
+
+  </div>
+  <script>
+
+    function calcular(){
+        //Aqui criamos uma variável para termos uma comunicação com txtvel
+        var txtv= window.document.querySelector('input#txtvel')
+
+        //precisamos criar uma variavel para receber o valor do id='res'
+        var res = window.document.querySelector('div#res')
+
+        //precisamos transformar txtvel em tipo de numero, então...
+        var vel = Number(txtv.value)
+
+        //Agora vamos pedir que var res receba a msg que exibira em tela
+        res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`
+
+        //Criando uma condição para avaliar a velocidade e multa, usaremos a
+        //a var vel porque já está convertida no tipo number
+        if (vel > 60){
+          //tem que ser += contatenado a informação senao a mensagem anteior é apagada
+          res.innerHTML += '<p>Você está <strong>MULTADO</strong> pelo excesso de velocidade'
+        }
+
+
+        //Vamos contatenar a informação de velocidade o...
+        res.innerHTML += `<p>Dirija sempre com o cinto de segurança</p>`
+
+    }
+
+  </script>
+
+
+
+</body>
+</html>
